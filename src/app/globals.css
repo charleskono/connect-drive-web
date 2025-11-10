@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Mode - Connect Mail */
+    --background: 0 0% 98%; /* High Light */
+    --foreground: 0 0% 13%; /* Low Dark */
+    --card: 0 0% 100%; /* High Pure */
+    --card-foreground: 0 0% 13%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+    --primary: 207 90% 54%; /* Primary Pure - Azul claro */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 262 45% 55%; /* Secondary Pure - Roxo */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 93%; /* High Medium */
+    --muted-foreground: 0 0% 46%; /* Low Medium */
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 4 90% 58%; /* Danger */
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 87%; /* High Dark */
+    --input: 0 0% 87%;
+    --ring: 207 90% 54%;
+    --success: 122 39% 49%; /* Success */
+    --info: 207 90% 54%; /* Info */
+    --warning: 45 100% 51%; /* Warning */
+  }
+
+  .dark {
+    /* Dark Mode - Connect Mail */
+    --background: 0 0% 7%; /* Low Dark */
+    --foreground: 0 0% 100%; /* High Pure */
+    --card: 0 0% 20%; /* Low Medium */
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 20%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 207 90% 54%; /* Primary Pure - Azul claro */
+    --primary-foreground: 0 0% 7%;
+    --secondary: 207 90% 54%; /* Secondary Pure - Azul claro */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 207 90% 54%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 4 90% 67%; /* Danger Dark */
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 207 90% 54%;
+    --success: 122 39% 64%; /* Success Dark */
+    --info: 207 90% 70%; /* Info Dark */
+    --warning: 45 100% 60%; /* Warning Dark */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Animações do logo Connect Drive */
+.connect-impact {
+  transition: all 0.3s ease;
+}
+
+.connect-impact:hover {
+  transform: scale(1.05);
+}
+
+.mail-bounce {
+  animation: mailBounce 2s ease-in-out infinite;
+}
+
+@keyframes mailBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
